@@ -201,7 +201,7 @@ img {
   text-align: center;
   font-size: 16px;
   font-weight: 700;
-  line-height: 1.88;
+  line-height: 1.87;
   letter-spacing: 0.96px;
   cursor: pointer;
 }
@@ -216,6 +216,7 @@ img {
 .btn-hero-form:hover,
 .btn-hero-form:focus {
   background-color: #188ce8;
+  outline: 1px solid var(--accent-color);
 }
 
 .backdrop {
@@ -249,7 +250,7 @@ img {
   padding: 40px;
 
   width: 528px;
-  height: 581px;
+  height: 586px;
   flex-shrink: 0;
   border-radius: 4px;
 
@@ -289,6 +290,9 @@ img {
 }
 
 .form-title {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
   margin-bottom: 12px;
 
   color: var(--primary-text-color);
@@ -373,7 +377,7 @@ img {
 }
 
 .user-agree {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
 }
@@ -392,6 +396,7 @@ img {
   background-color: #fff;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .custom-checkbox-icon {
@@ -406,6 +411,10 @@ img {
   outline: var(--accent-color);
 }
 
+.checkbox-modal:focus + .custom-checkbox {
+  outline: 2px solid var(--accent-color);
+}
+
 .user-agree-text {
   color: var(--title-text-color);
   font-size: 14px;
@@ -415,12 +424,18 @@ img {
 }
 
 .user-agree-link {
+  display: inline-block;
+  margin-left: 4px;
   color: var(--accent-color);
   font-size: 14px;
   font-weight: 400;
   line-height: 1.71;
   letter-spacing: 0.42px;
   text-decoration-line: underline;
+}
+
+.user-agree-link:focus {
+  outline: 2px solid var(--accent-color);
 }
 
 /* sections */
@@ -713,10 +728,6 @@ img {
 
 /* icons footer */
 
-.footer-icons {
-  margin-right: 93px;
-}
-
 .footer .social-link {
   background-color: rgba(255, 255, 255, 0.1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -741,6 +752,10 @@ img {
   margin-right: 70px;
 }
 
+.ft-form-wrapper {
+  margin-left: auto;
+}
+
 .ft-input-mail {
   width: 358px;
   padding: 15px 16px;
@@ -760,12 +775,14 @@ img {
 
 .ft-input-mail::placeholder {
   color: rgba(255, 255, 255, 0.6);
-  font-family: Roboto;
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
   line-height: 1.25;
   letter-spacing: 0.48px;
+}
+
+.ft-input-mail:not(:placeholder-shown) {
+  color: #ffffff;
 }
 
 .ft-input-mail:focus {
