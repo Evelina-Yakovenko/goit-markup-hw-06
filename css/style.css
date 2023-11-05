@@ -250,7 +250,7 @@ img {
   padding: 40px;
 
   width: 528px;
-  height: 586px;
+  height: 581px;
   flex-shrink: 0;
   border-radius: 4px;
 
@@ -374,6 +374,11 @@ img {
   font-weight: 400;
   line-height: normal;
   letter-spacing: 0.12px;
+}
+
+.user-agree-wrapper {
+  display: flex;
+  justify-content: center;
 }
 
 .user-agree {
